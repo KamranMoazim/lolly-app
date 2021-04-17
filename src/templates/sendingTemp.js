@@ -12,8 +12,11 @@ function SendingTemp({pageContext: {c1,c2,c3,sender,msg,rec,link}}) {
             </div>
             <div>
                 <h1><b style={{color: c1}}>Sender: </b>{sender || 'You dont have a sender name'}</h1>
+
                 <p style={{fontSize: '27px'}}><b style={{color: c2 || 'red'}}> Message: </b>{msg || 'You dont have a message'}</p>
-                <h1><b style={{color: location.state["c2"]}}>Reciever: </b>{rec || 'You dont have a receiver name'}</h1>
+
+                <h1><b style={{color: c3 }}>Reciever: </b>{rec || 'You dont have a receiver name'}</h1>
+
             </div>
             <Link to="/">Make your Own Lolly and Share with Friends!</Link>
         </div>
