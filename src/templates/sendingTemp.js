@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "gatsby";
 import Lolly from "../components/lolly";
 import * as styles from "./showLolly.module.css";
 
