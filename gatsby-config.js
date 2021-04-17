@@ -17,7 +17,7 @@ plugins: [
         // This is field under which it's accessible
         fieldName: "get_lollies",
         // Url to query from
-        url: "https://607a9209b62f2000079f50c9--serene-mahavira-bafc5f.netlify.app/.netlify/functions/vCard"
+        url: "https://lollies.netlify.app/.netlify/functions/vCard"
     },
     },
 ],
