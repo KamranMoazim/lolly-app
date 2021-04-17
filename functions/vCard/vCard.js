@@ -71,13 +71,13 @@ const resolvers = {
           })
         );
 
-        axios.post("https://api.netlify.com/build_hooks/607a9fc8c418d6e1c6677821")
-        .then(function (response) {
-          console.log(response);
-        })
-        .catch(function (error) {
-          console.error(error);
-        });
+        // axios.post("https://api.netlify.com/build_hooks/607a9fc8c418d6e1c6677821")
+        // .then(function (response) {
+        //   console.log(response);
+        // })
+        // .catch(function (error) {
+        //   console.error(error);
+        // });
 
         return result.data.data;
       } catch (err) {
