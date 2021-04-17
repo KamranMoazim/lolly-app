@@ -1,28 +1,3 @@
-// const path = require("path")
-
-// exports.createPages = async ({ graphql, actions }) => {
-//     const { createPage } = actions
-//     const response = await graphql(`
-//         query {
-//             allGraphCmsBlog {
-//                 nodes {
-//                     link
-//                 }
-//             }
-//         }
-//     `)
-
-// response.data.allGraphCmsBlog.nodes.forEach(node => {
-//     createPage({
-//         path: `/showLolly/${node.link}`,
-//         component: path.resolve("./src/templates/sendingTemp.js"),
-//         context: {
-//             link: node.link,
-//         },
-//     })
-//     })
-// }
-
 const path = require("path")
 exports.createPages = async ({ graphql, actions }) => {
 const { createPage } = actions
@@ -59,33 +34,3 @@ data.get_lollies.getVCard.forEach(node => {
     })
 })
 }
-
-
-
-// const result = await graphql(`
-// query MyQuery {
-//   LOLLIES {
-//     getLollies {
-//       id
-//       colorTop
-//       colorMiddle
-//       colorBottom
-//       recipient
-//       message
-//       sender
-//       lollyPath
-//     }
-//   }
-// }
-// `);
-
-// console.log(result);
-// result.data.LOLLIES.getLollies.map((data) => {
-// createPage({
-//   path: `${data.lollyPath}`,
-//   component: path.resolve("./src/Template/Template.tsx"),
-//   context: {
-//     data: data,
-//   },
-// });
-// });

@@ -1,7 +1,7 @@
 const { ApolloServer, gql } = require('apollo-server-lambda')
 var faunadb = require("faunadb"),
   q = faunadb.query;
-
+const axios = require("axios");
 
 const typeDefs = gql`
   type vCard {
@@ -56,7 +56,7 @@ const resolvers = {
       } catch (err) {
         console.log(err)
       }
-      return [{}]
+      // return [{}]
     },
   },
   Mutation: {
@@ -70,12 +70,22 @@ const resolvers = {
             data: { c1, c2, c3, rec, msg, sender, link },  // : shortid.generate()
           })
         );
+
+        axios
+        .post("https://api.netlify.com/build_hooks/607a9fc8c418d6e1c6677821")
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+
         return result.data.data;
       } catch (err) {
         console.log(err);
       }
       console.log(result);
-      return [{}]
+      // return [{}]
     }
   }
 }
@@ -88,3 +98,4 @@ const server = new ApolloServer({
 const handler = server.createHandler()
 
 module.exports = { handler }
+  // https://api.netlify.com/build_hooks/607a9fc8c418d6e1c6677821
